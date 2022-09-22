@@ -1,5 +1,6 @@
 package com.submission.sportapp.core.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ class SportsAdapter: RecyclerView.Adapter<SportsAdapter.ListViewHolder>() {
     private var listData = ArrayList<Sports>()
     var onItemClick: ((Sports) -> Unit)? = null
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setData(newListData: List<Sports>?){
         if (newListData == null) return
         listData.clear()
